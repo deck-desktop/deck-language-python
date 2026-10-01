@@ -1,0 +1,28 @@
+{
+  "languageId": "python",
+  "extensions": ["py", "pyi"],
+  "serverId": "basedpyright",
+  "server": {
+    "strategy": "node-module",
+    "module": "basedpyright-langserver",
+    "args": ["--stdio"]
+  },
+  "rootMarker": "pyproject.toml",
+  "extraTokenColors": [
+    { "token": "decorator", "foreground": "DCDCAA" },
+    { "token": "selfParameter", "foreground": "569CD6" },
+    { "token": "clsParameter", "foreground": "569CD6" },
+    { "token": "class.builtin", "foreground": "4EC9B0" },
+    { "token": "function.builtin", "foreground": "DCDCAA" },
+    { "token": "variable.builtin", "foreground": "569CD6" },
+    { "token": "variable.readonly", "foreground": "4FC1FF" }
+  ],
+  "initializationOptions": {
+    "python": {
+      "analysis": {
+        "typeCheckingMode": "standard",
+        "diagnosticMode": "openFilesOnly"
+      }
+    }
+  }
+}
