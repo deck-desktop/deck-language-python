@@ -21,6 +21,19 @@ overrides the grammar's colour with nothing**. Without the `decorator` rule here
 goes from blue to white and adding the server looks like a regression. `selfParameter` and
 `clsParameter` are there for the same reason.
 
+## Debugging
+
+**Debug <file>.py** in the editor's Run and Debug panel (or F5) runs the file under debugpy, with
+breakpoints, stepping and variables. It needs debugpy in the Python on PATH:
+
+```sh
+python -m pip install --user debugpy
+```
+
+**Settings -> Plugins -> Languages** says whether it was found, and its **Install** button runs that
+command in a terminal tab (as it does `npm install -g basedpyright` for the language server). The
+Run and Debug panel offers the same button when the debugger does not start.
+
 ## Installing it
 
 From inside Deck: **Settings -> Plugins -> Browse**, pick it, and it loads straight away.

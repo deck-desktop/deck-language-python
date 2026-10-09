@@ -5,9 +5,22 @@
   "server": {
     "strategy": "node-module",
     "module": "basedpyright-langserver",
-    "args": ["--stdio"]
+    "args": ["--stdio"],
+    "install": { "kind": "npm", "packages": ["basedpyright"] }
   },
   "rootMarker": "pyproject.toml",
+  "debug": {
+    "type": "python",
+    "install": { "kind": "pip", "packages": ["debugpy"] },
+    "adapter": { "strategy": "path", "command": "python", "args": ["-m", "debugpy.adapter"] },
+    "launch": {
+      "program": "${file}",
+      "cwd": "${fileDirname}",
+      "console": "internalConsole",
+      "justMyCode": true,
+      "pythonArgs": ["-Xfrozen_modules=off"]
+    }
+  },
   "extraTokenColors": [
     { "token": "decorator", "foreground": "DCDCAA" },
     { "token": "selfParameter", "foreground": "569CD6" },
