@@ -1,5 +1,6 @@
 {
   "languageId": "python",
+  "version": "1.0.0",
   "extensions": ["py", "pyi"],
   "serverId": "basedpyright",
   "server": {
